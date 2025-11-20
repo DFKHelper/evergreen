@@ -109,16 +109,14 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
                   className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
                 >
                   View All Services
-                  <motion.svg
+                  <svg
                     className="ml-2 w-5 h-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </motion.svg>
+                  </svg>
                 </Link>
               </motion.div>
             </FadeIn>
