@@ -19,7 +19,7 @@ export default function Navigation() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Image
-                  src="/logo.jpg"
+                  src="/logo.png"
                   alt="Evergreen Chiropractic Logo"
                   width={56}
                   height={56}
