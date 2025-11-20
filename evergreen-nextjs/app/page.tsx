@@ -18,13 +18,13 @@ export default async function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-background.webp"
+            src="/hero-background.png"
             alt="Evergreen trees and nature"
             fill
-            className="object-cover brightness-75"
+            className="object-cover brightness-100 saturate-110 contrast-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/30 via-green-900/20 to-teal-900/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/15 via-green-900/10 to-teal-900/15"></div>
         </div>
 
         {/* Content */}

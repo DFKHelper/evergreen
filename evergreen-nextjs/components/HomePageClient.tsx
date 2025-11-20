@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   NatureBackground,
   GlassmorphicCard,
@@ -54,8 +55,8 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
   return (
     <>
       {/* Family-Centered Care Section */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden mx-4 sm:mx-6 lg:mx-8 rounded-3xl mb-8">
-        <NatureBackground variant="lush" showTrees={true}>
+      <section className="relative overflow-hidden mx-4 sm:mx-6 lg:mx-8 rounded-3xl mt-8 mb-4">
+        <NatureBackground variant="lush" showTrees={true} className="py-10 px-6 sm:px-8 lg:px-12">
           <div className="max-w-6xl mx-auto relative z-10 space-y-8">
             <FadeIn direction="up" delay={0.2}>
               <GlassmorphicCard variant="strong" className="p-8 rounded-3xl">
@@ -77,8 +78,8 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
       </section>
 
       {/* Featured Services with Nature Background */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden mx-4 sm:mx-6 lg:mx-8 rounded-3xl">
-        <NatureBackground variant="subtle" showTrees={true}>
+      <section className="relative overflow-hidden mx-4 sm:mx-6 lg:mx-8 rounded-3xl mb-4">
+        <NatureBackground variant="vibrant" showTrees={true} className="py-16 px-6 sm:px-8 lg:px-12">
           <div className="max-w-7xl mx-auto relative z-10">
             <FadeIn direction="up" className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -95,25 +96,69 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
                   <Link href={`/services/${service.slug.current}`} className="block h-full">
                     <RippleEffect>
                       <GlassmorphicCard variant="medium" className="p-6 h-full flex flex-col items-center text-center">
-                        <motion.div
-                          className="text-emerald-700 mb-4"
-                          whileHover={{ rotate: 10, scale: 1.1 }}
-                          transition={{ type: "spring", stiffness: 300 }}
-                        >
-                          <svg
-                            className="w-12 h-12"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
+                        {service.title === 'Pregnant Moms' ? (
+                          <motion.div
+                            className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: "spring", stiffness: 300 }}
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M13 10V3L4 14h7v7l9-11h-7z"
+                            <Image
+                              src="/pregnant-moms.png"
+                              alt="Pregnant Moms - Webster technique care"
+                              width={160}
+                              height={120}
+                              className="rounded-2xl"
                             />
-                          </svg>
-                        </motion.div>
+                          </motion.div>
+                        ) : service.title === 'Newborns & Kids' ? (
+                          <motion.div
+                            className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                          >
+                            <Image
+                              src="/newborns-kids.png"
+                              alt="Newborns & Kids - Gentle pediatric care"
+                              width={160}
+                              height={120}
+                              className="rounded-2xl"
+                            />
+                          </motion.div>
+                        ) : service.title === 'Adults' ? (
+                          <motion.div
+                            className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                          >
+                            <Image
+                              src="/adults.png"
+                              alt="Adults - Peak performance care"
+                              width={160}
+                              height={120}
+                              className="rounded-2xl"
+                            />
+                          </motion.div>
+                        ) : (
+                          <motion.div
+                            className="text-emerald-700 mb-4"
+                            whileHover={{ rotate: 10, scale: 1.1 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                          >
+                            <svg
+                              className="w-12 h-12"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M13 10V3L4 14h7v7l9-11h-7z"
+                              />
+                            </svg>
+                          </motion.div>
+                        )}
                         <h3 className="text-xl font-bold text-white mb-2">
                           {service.title}
                         </h3>
@@ -148,8 +193,8 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
       </section>
 
       {/* Why Choose Us */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <NatureBackground variant="lush" showTrees={false}>
+      <section className="relative overflow-hidden mx-4 sm:mx-6 lg:mx-8 rounded-3xl">
+        <NatureBackground variant="lush" showTrees={false} className="py-16 px-6 sm:px-8 lg:px-12">
           <div className="max-w-7xl mx-auto">
             <FadeIn direction="up" className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -162,48 +207,66 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
 
             <StaggerContainer className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto" staggerDelay={0.2}>
               <StaggerItem>
-                <GlassmorphicCard variant="strong" className="p-6 h-full">
+                <GlassmorphicCard variant="strong" className="p-6 h-full flex flex-col items-center">
                   <motion.div
-                    className="text-4xl mb-4"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
+                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   >
-                    🔍
+                    <Image
+                      src="/specific-analysis.png"
+                      alt="Specific Analysis - Doctors examining spine x-ray"
+                      width={200}
+                      height={150}
+                      className="rounded-2xl"
+                    />
                   </motion.div>
-                  <h3 className="text-xl font-bold text-white mb-2">Specific Analysis</h3>
-                  <p className="text-gray-100">
+                  <h3 className="text-xl font-bold text-white mb-2 text-center">Specific Analysis</h3>
+                  <p className="text-gray-100 text-center">
                     We use 5 pillars of analysis including x-rays, instrumentation, and palpation to find the exact cause of your problem
                   </p>
                 </GlassmorphicCard>
               </StaggerItem>
 
               <StaggerItem>
-                <GlassmorphicCard variant="strong" className="p-6 h-full">
+                <GlassmorphicCard variant="strong" className="p-6 h-full flex flex-col items-center">
                   <motion.div
-                    className="text-4xl mb-4"
-                    animate={{ rotate: [0, 10, 0, -10, 0] }}
-                    transition={{ duration: 3, repeat: Infinity }}
+                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   >
-                    🎯
+                    <Image
+                      src="/precise-adjustments.png"
+                      alt="Precise Adjustments - Gonstead technique"
+                      width={200}
+                      height={150}
+                      className="rounded-2xl"
+                    />
                   </motion.div>
-                  <h3 className="text-xl font-bold text-white mb-2">Precise Adjustments</h3>
-                  <p className="text-gray-100">
+                  <h3 className="text-xl font-bold text-white mb-2 text-center">Precise Adjustments</h3>
+                  <p className="text-gray-100 text-center">
                     No twisting or rotation. We adjust one bone at a time with specific, gentle force
                   </p>
                 </GlassmorphicCard>
               </StaggerItem>
 
               <StaggerItem>
-                <GlassmorphicCard variant="strong" className="p-6 h-full">
+                <GlassmorphicCard variant="strong" className="p-6 h-full flex flex-col items-center">
                   <motion.div
-                    className="text-4xl mb-4"
-                    animate={{ scale: [1, 1.15, 1] }}
-                    transition={{ duration: 2.5, repeat: Infinity }}
+                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   >
-                    👨‍👩‍👧‍👦
+                    <Image
+                      src="/family-care.png"
+                      alt="Family Care - Care for all ages"
+                      width={200}
+                      height={150}
+                      className="rounded-2xl"
+                    />
                   </motion.div>
-                  <h3 className="text-xl font-bold text-white mb-2">Family Care</h3>
-                  <p className="text-gray-100">
+                  <h3 className="text-xl font-bold text-white mb-2 text-center">Family Care</h3>
+                  <p className="text-gray-100 text-center">
                     From newborns to grandparents, we provide safe, effective care for the whole family
                   </p>
                 </GlassmorphicCard>

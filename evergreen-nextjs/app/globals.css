@@ -78,6 +78,21 @@ html {
   }
 }
 
+/* Custom text cursor */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+[contenteditable="true"],
+p,
+h1, h2, h3, h4, h5, h6,
+span,
+div {
+  cursor: url('/text-cursor.svg') 12 20, text;
+}
+
 /* Custom utility classes for nature animations */
 .animate-shimmer {
   background-size: 200% auto;
