@@ -53,8 +53,31 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
 
   return (
     <>
+      {/* Family-Centered Care Section */}
+      <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden mx-4 sm:mx-6 lg:mx-8 rounded-3xl mb-8">
+        <NatureBackground variant="lush" showTrees={true}>
+          <div className="max-w-6xl mx-auto relative z-10 space-y-8">
+            <FadeIn direction="up" delay={0.2}>
+              <GlassmorphicCard variant="strong" className="p-8 rounded-3xl">
+                <p className="text-white text-lg sm:text-xl leading-relaxed text-center">
+                  We are a family-centered chiropractic office striving to provide children and families with gentle, specific chiropractic care. We seek to provide you and your family with all the tools you need to live your healthiest lives. We are located in the heart of Music Row and grateful to be serving this amazing community!
+                </p>
+              </GlassmorphicCard>
+            </FadeIn>
+
+            <FadeIn direction="up" delay={0.4}>
+              <GlassmorphicCard variant="strong" className="p-8 rounded-3xl">
+                <p className="text-white text-lg sm:text-xl leading-relaxed text-center">
+                  As the leading pediatric, prenatal, and family wellness experts, we welcome you and your family to enjoy a beautiful healing experience & achieve optimal health and well-being. Whether you are trying to conceive, expecting a baby, experiencing uncomfortable symptoms, already leading a healthy lifestyle, or simply want more for your life, Evergreen Chiropractic is here for you!
+                </p>
+              </GlassmorphicCard>
+            </FadeIn>
+          </div>
+        </NatureBackground>
+      </section>
+
       {/* Featured Services with Nature Background */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden mx-4 sm:mx-6 lg:mx-8 rounded-3xl">
         <NatureBackground variant="subtle" showTrees={true}>
           <div className="max-w-7xl mx-auto relative z-10">
             <FadeIn direction="up" className="text-center mb-12">
@@ -71,7 +94,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
                 <StaggerItem key={service._id}>
                   <Link href={`/services/${service.slug.current}`} className="block h-full">
                     <RippleEffect>
-                      <GlassmorphicCard variant="medium" className="p-6 h-full">
+                      <GlassmorphicCard variant="medium" className="p-6 h-full flex flex-col items-center text-center">
                         <motion.div
                           className="text-emerald-700 mb-4"
                           whileHover={{ rotate: 10, scale: 1.1 }}
@@ -106,7 +129,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/services"
-                  className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
+                  className="inline-flex items-center px-6 py-3 bg-white/90 backdrop-blur-sm text-emerald-700 hover:bg-[#6ff799] hover:text-emerald-900 font-semibold rounded-2xl shadow-lg transition-all"
                 >
                   View All Services
                   <svg

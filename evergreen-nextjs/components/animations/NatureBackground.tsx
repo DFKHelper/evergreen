@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
 
 interface NatureBackgroundProps {
@@ -16,13 +16,6 @@ export default function NatureBackground({
   showTrees = true,
   variant = 'forest'
 }: NatureBackgroundProps) {
-  const { scrollY } = useScroll()
-
-  // Parallax effect for different layers
-  const y1 = useTransform(scrollY, [0, 1000], [0, 200])
-  const y2 = useTransform(scrollY, [0, 1000], [0, 150])
-  const y3 = useTransform(scrollY, [0, 1000], [0, 100])
-
   const gradients = {
     forest: 'from-green-900/20 via-emerald-800/10 to-teal-900/20',
     subtle: 'from-green-50/40 via-emerald-50/30 to-teal-50/40',
@@ -30,48 +23,34 @@ export default function NatureBackground({
   }
 
   return (
-    <div className={`relative ${className}`}>
-      {/* Background gradients with parallax */}
-      <motion.div
-        className={`absolute inset-0 bg-gradient-to-br ${gradients[variant]}`}
-        style={{ y: y1 }}
+    <div className={`relative rounded-3xl overflow-hidden ${className}`}>
+      {/* Background gradients - static, no parallax */}
+      <div
+        className={`absolute inset-0 bg-gradient-to-br ${gradients[variant]} rounded-3xl`}
       />
 
-      <motion.div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-100/40 via-emerald-50/30 to-transparent"
-        style={{ y: y2 }}
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-100/40 via-emerald-50/30 to-transparent rounded-3xl"
       />
 
       {showTrees && (
         <>
-          {/* Swaying trees in background */}
-          <motion.div
-            className="absolute left-[5%] top-0 opacity-10"
-            style={{ y: y3 }}
-          >
+          {/* Swaying trees in background - static position */}
+          <div className="absolute left-[5%] top-0 opacity-10">
             <SwayingTree delay={0} size="large" />
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="absolute right-[10%] top-10 opacity-15"
-            style={{ y: y2 }}
-          >
+          <div className="absolute right-[10%] top-10 opacity-15">
             <SwayingTree delay={1.5} size="medium" />
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="absolute left-[15%] top-20 opacity-12"
-            style={{ y: y1 }}
-          >
+          <div className="absolute left-[15%] top-20 opacity-12">
             <SwayingTree delay={0.8} size="small" />
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="absolute right-[5%] top-40 opacity-10"
-            style={{ y: y3 }}
-          >
+          <div className="absolute right-[5%] top-40 opacity-10">
             <SwayingTree delay={2} size="medium" />
-          </motion.div>
+          </div>
         </>
       )}
 

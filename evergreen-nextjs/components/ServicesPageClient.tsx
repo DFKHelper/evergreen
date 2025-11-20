@@ -120,7 +120,7 @@ export default function ServicesPageClient() {
                               />
                             </div>
                           ) : (
-                            <div className="relative h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-emerald-900/80 via-green-900/70 to-teal-900/80 backdrop-blur-sm border border-[#6ff799]/30 flex items-center justify-center shadow-lg">
+                            <div className="relative h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-emerald-900/80 via-green-900/70 to-teal-900/80 backdrop-blur-sm border border-[#6ff799]/30 flex items-center justify-center shadow-xl">
                               <div className="text-9xl drop-shadow-lg">{service.icon}</div>
                             </div>
                           )}

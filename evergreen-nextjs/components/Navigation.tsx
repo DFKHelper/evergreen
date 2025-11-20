@@ -23,7 +23,7 @@ export default function Navigation() {
                   alt="Evergreen Chiropractic Logo"
                   width={56}
                   height={56}
-                  className="rounded brightness-110 contrast-105 saturate-105"
+                  className="rounded-xl brightness-110 contrast-105 saturate-105"
                 />
               </motion.div>
               <span className="text-xl font-bold text-[#6ff799] group-hover:text-white transition-colors">
@@ -44,7 +44,7 @@ export default function Navigation() {
               <Link
                 href="https://evergreenchironash.janeapp.com"
                 target="_blank"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 transition-all shadow-sm"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 transition-all shadow-sm"
               >
                 Book Now
               </Link>
@@ -55,7 +55,7 @@ export default function Navigation() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-[#6ff799] hover:bg-emerald-800/50 transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-gray-100 hover:text-[#6ff799] hover:bg-emerald-800/50 transition-colors"
               aria-label="Toggle menu"
             >
               <svg
@@ -122,7 +122,7 @@ export default function Navigation() {
               <Link
                 href="https://evergreenchironash.janeapp.com"
                 target="_blank"
-                className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700"
+                className="block px-3 py-2 rounded-xl text-base font-medium text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700"
                 onClick={() => setIsOpen(false)}
               >
                 Book an Appointment

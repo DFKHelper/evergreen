@@ -18,39 +18,39 @@ export default async function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-image.jpeg"
+            src="/hero-background.webp"
             alt="Evergreen trees and nature"
             fill
-            className="object-cover"
+            className="object-cover brightness-75"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-emerald-50/50 to-green-50/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/30 via-green-900/20 to-teal-900/30"></div>
         </div>
 
         {/* Content */}
         <div className="relative z-10 w-full py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-3xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
                 {settings?.title || 'Evergreen Chiropractic'}
               </h1>
-              <p className="text-xl sm:text-2xl text-emerald-700 font-semibold mb-4">
+              <p className="text-xl sm:text-2xl text-[#6ff799] font-semibold mb-4 drop-shadow-md">
                 {settings?.tagline || 'The only Gonstead office in Nashville'}
               </p>
-              <p className="text-lg text-gray-800 mb-8">
+              <p className="text-lg text-gray-100 mb-8 drop-shadow-md">
                 {settings?.description || 'Specific chiropractic care for the entire family. We also specialize in hormone imbalance, infertility, and body work for lip & tongue ties in infants.'}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={settings?.bookingUrl || 'https://evergreenchironash.janeapp.com'}
                   target="_blank"
-                  className="inline-flex items-center justify-center px-8 py-3 border-2 border-emerald-600 text-base font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 transition-colors shadow-lg"
+                  className="inline-flex items-center justify-center px-8 py-3 border-2 border-[#6ff799] text-base font-medium rounded-2xl text-white bg-[#6ff799]/20 hover:bg-[#6ff799] hover:text-emerald-900 transition-colors shadow-lg backdrop-blur-sm"
                 >
                   Book an Appointment
                 </Link>
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center px-8 py-3 border-2 border-emerald-600 text-base font-medium rounded-md text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-base font-medium rounded-2xl text-white bg-white/10 hover:bg-white hover:text-emerald-900 transition-colors backdrop-blur-sm"
                 >
                   Learn More About Us
                 </Link>

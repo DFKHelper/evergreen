@@ -104,7 +104,7 @@ export default function AboutPageClient({
                               className="object-cover"
                             />
                           ) : (
-                            <div className="bg-gradient-to-br from-emerald-800 to-green-800 flex items-center justify-center w-full h-full">
+                            <div className="bg-gradient-to-br from-emerald-800 to-green-800 flex items-center justify-center w-full h-full rounded-2xl">
                               <div className="text-6xl text-emerald-400">👤</div>
                             </div>
                           )}

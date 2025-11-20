@@ -53,7 +53,8 @@ export default function RippleEffect({
             left: ripple.x,
             top: ripple.y,
             backgroundColor: rippleColor,
-            transform: 'translate(-50%, -50%)'
+            transform: 'translate(-50%, -50%)',
+            borderRadius: '50%'
           }}
           initial={{ width: 0, height: 0, opacity: 1 }}
           animate={{
