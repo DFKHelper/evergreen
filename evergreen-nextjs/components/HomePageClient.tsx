@@ -203,7 +203,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
               <StaggerItem>
                 <GlassmorphicCard variant="strong" className="p-6 h-full flex flex-col items-center">
                   <motion.div
-                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center w-[200px] h-[150px]"
+                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center w-[200px] h-[150px] mx-auto"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
@@ -225,7 +225,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
               <StaggerItem>
                 <GlassmorphicCard variant="strong" className="p-6 h-full flex flex-col items-center">
                   <motion.div
-                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center w-[200px] h-[150px]"
+                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center w-[200px] h-[150px] mx-auto"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
@@ -247,7 +247,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
               <StaggerItem>
                 <GlassmorphicCard variant="strong" className="p-6 h-full flex flex-col items-center">
                   <motion.div
-                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center w-[200px] h-[150px]"
+                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center w-[200px] h-[150px] mx-auto"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
