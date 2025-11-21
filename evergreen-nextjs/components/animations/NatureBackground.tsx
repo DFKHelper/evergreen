@@ -35,42 +35,48 @@ export default function NatureBackground({
 
       {showTrees && (
         <>
-          {/* Swaying trees in background - static position */}
-          <div className="absolute left-[5%] top-0 opacity-30">
-            <SwayingTree delay={0} size="large" />
+          {/* Logo-style tree trio on left side: small, large, small - bottoms aligned */}
+          <div className="absolute left-[2%] top-0 flex items-end gap-0 opacity-30">
+            <SwayingTree delay={0} size="small" />
+            <div className="-ml-4">
+              <SwayingTree delay={0.3} size="large" />
+            </div>
+            <div className="-ml-4">
+              <SwayingTree delay={0.6} size="small" />
+            </div>
           </div>
 
-          <div className="absolute right-[10%] top-10 opacity-40">
-            <SwayingTree delay={1.5} size="medium" />
+          {/* Logo-style tree trio on right side: small, large, small - bottoms aligned */}
+          <div className="absolute right-[2%] top-10 flex items-end gap-0 opacity-30">
+            <SwayingTree delay={1.5} size="small" />
+            <div className="-ml-4">
+              <SwayingTree delay={1.8} size="large" />
+            </div>
+            <div className="-ml-4">
+              <SwayingTree delay={2.1} size="small" />
+            </div>
           </div>
 
-          <div className="absolute left-[15%] top-20 opacity-35">
+          {/* Middle section left - tree trio with aligned bottoms */}
+          <div className="absolute left-[3%] top-[40%] flex items-end gap-0 opacity-25">
             <SwayingTree delay={0.8} size="small" />
+            <div className="-ml-4">
+              <SwayingTree delay={1.1} size="large" />
+            </div>
+            <div className="-ml-4">
+              <SwayingTree delay={1.4} size="small" />
+            </div>
           </div>
 
-          <div className="absolute right-[5%] top-40 opacity-30">
-            <SwayingTree delay={2} size="medium" />
-          </div>
-
-          {/* Middle section trees */}
-          <div className="absolute left-[8%] top-[35%] opacity-35">
-            <SwayingTree delay={1.2} size="medium" />
-          </div>
-
-          <div className="absolute right-[15%] top-[45%] opacity-30">
-            <SwayingTree delay={2.5} size="small" />
-          </div>
-
-          <div className="absolute left-[20%] top-[55%] opacity-40">
-            <SwayingTree delay={0.5} size="large" />
-          </div>
-
-          <div className="absolute right-[8%] top-[65%] opacity-35">
-            <SwayingTree delay={1.8} size="medium" />
-          </div>
-
-          <div className="absolute left-[12%] top-[30%] opacity-30">
-            <SwayingTree delay={0.3} size="small" />
+          {/* Middle section right - tree trio with aligned bottoms */}
+          <div className="absolute right-[3%] top-[50%] flex items-end gap-0 opacity-25">
+            <SwayingTree delay={2.3} size="small" />
+            <div className="-ml-4">
+              <SwayingTree delay={2.6} size="large" />
+            </div>
+            <div className="-ml-4">
+              <SwayingTree delay={2.9} size="small" />
+            </div>
           </div>
         </>
       )}
