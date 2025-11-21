@@ -42,11 +42,11 @@ export default function Navigation() {
             <NavLink href="/cft-gillespie">CFT</NavLink>
             <NavLink href="/visceral-therapy">Visceral</NavLink>
             <NavLink href="/blog">Blog</NavLink>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex items-center">
               <Link
                 href="https://evergreenchironash.janeapp.com"
                 target="_blank"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 transition-all shadow-sm"
+                className="flex items-center justify-center px-5 py-2 text-sm font-semibold rounded-xl bg-[#6ff799] text-emerald-900 hover:bg-[#5ce088] transition-all shadow-md"
               >
                 Book Now
               </Link>

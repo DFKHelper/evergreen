@@ -90,6 +90,17 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-[#6ff799]/30 text-center text-gray-200">
           <p>&copy; {currentYear} Evergreen Chiropractic. All rights reserved.</p>
+          <p className="mt-2 text-sm text-gray-300">
+            Crafted by{' '}
+            <a
+              href="https://dfkhelper.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#6ff799] hover:underline"
+            >
+              DFK Helper
+            </a>
+          </p>
         </div>
       </div>
     </footer>

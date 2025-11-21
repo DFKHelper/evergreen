@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   NatureBackground,
   GlassmorphicCard,
@@ -233,6 +234,17 @@ export default function CFTPageClient() {
                 <FadeIn direction="up" delay={0.1}>
                   <GlassmorphicCard variant="medium" className="p-8 rounded-3xl">
                     <h3 className="text-2xl font-bold text-white mb-4 text-center">What exactly is a Tongue Tie?</h3>
+                    <div className="flex justify-center mb-6">
+                      <div className="rounded-2xl overflow-hidden shadow-xl bg-emerald-900/20 max-w-2xl w-full">
+                        <Image
+                          src="/cft-new-1.png"
+                          alt="Tongue Tie Assessment"
+                          width={800}
+                          height={800}
+                          className="w-full h-auto rounded-xl"
+                        />
+                      </div>
+                    </div>
                     <p className="text-gray-100 text-center">
                       We all have a frenulum which is tissue on the underside of our tongue connected to the floor of the mouth. When this tissue is too short, too thick, too tight, and attached too far forward on the tongue, it will affect mobility, function and the tongue's resting posture. In some cases, a tied frenulum may not be visible (known as a submucosal tie). A tongue tie condition is often accompanied by a lip tie or cheek ties (also known as buccal ties). All of these conditions are referred to as Tethered Oral Tissues (TOTS).
                     </p>
@@ -259,9 +271,18 @@ export default function CFTPageClient() {
                   </GlassmorphicCard>
                 </FadeIn>
 
-                <StaggerContainer className="grid md:grid-cols-2 gap-8" staggerDelay={0.2}>
+                <StaggerContainer className="space-y-8" staggerDelay={0.2}>
                   <StaggerItem>
                     <GlassmorphicCard variant="strong" className="p-6 h-full">
+                      <div className="rounded-xl overflow-hidden shadow-lg bg-emerald-900/20 mb-4">
+                        <Image
+                          src="/cft-new-3.png"
+                          alt="Tongue Tie Treatment for Infants"
+                          width={800}
+                          height={600}
+                          className="w-full h-auto"
+                        />
+                      </div>
                       <h4 className="text-xl font-bold text-[#6ff799] mb-4">For Infants</h4>
                       <p className="text-gray-100 text-sm">
                         Since the tongue has been tethered during fetal life, it is likely that the infant will have a high palate because it is the tongue's position in the roof of the mouth that forms the wide palate. This may affect the ability to breastfeed efficiently. Breastfeeding issues may include noisy sucking, clicking, popping on/off breast, leaking milk from sides of mouth, gagging, blisters, inefficient nursing and pain for the Mom. Other tongue tie related conditions may include reflux, colic, poor sleep, poor weight gain, digestive issues and general fussiness.
@@ -271,6 +292,15 @@ export default function CFTPageClient() {
 
                   <StaggerItem>
                     <GlassmorphicCard variant="strong" className="p-6 h-full">
+                      <div className="rounded-xl overflow-hidden shadow-lg bg-emerald-900/20 mb-4">
+                        <Image
+                          src="/cft-new-2.png"
+                          alt="Tongue Tie Therapy for Children and Adults"
+                          width={800}
+                          height={600}
+                          className="w-full h-auto"
+                        />
+                      </div>
                       <h4 className="text-xl font-bold text-[#6ff799] mb-4">For Children & Adults</h4>
                       <p className="text-gray-100 text-sm">
                         You may be surprised to learn that many "common" health issues are related to a Tongue Tie or improper oral function. Some of the related conditions are mouth breathing, speech issues, excessive cavities, narrow palate, crooked teeth, recessed jaw, dark circles/tired eyes, poor posture, difficulty chewing, picky eating, messy eating, slow eating, large tonsils, ADHD symptoms, anxiety, poor sleep, bed wetting, snoring, sleep disordered breathing/sleep apnea, neck and shoulder tension, headaches, grinding/clenching.
@@ -279,6 +309,26 @@ export default function CFTPageClient() {
                   </StaggerItem>
                 </StaggerContainer>
               </div>
+            </div>
+          </section>
+
+          {/* Embodied Breastfeeding CTA */}
+          <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
+            <div className="max-w-4xl mx-auto">
+              <FadeIn direction="up">
+                <GlassmorphicCard variant="strong" className="p-8 rounded-3xl text-center">
+                  <h2 className="text-2xl font-bold text-white mb-4">Embodied Breastfeeding</h2>
+                  <p className="text-gray-100 mb-6">
+                    A 90-minute group session to support you and your baby on your feeding journey
+                  </p>
+                  <Link
+                    href="/embodied-breastfeeding"
+                    className="inline-flex items-center justify-center px-8 py-3 bg-[#6ff799] text-emerald-900 text-base font-semibold rounded-2xl hover:bg-[#5ce088] transition-all hover:scale-105"
+                  >
+                    Learn More
+                  </Link>
+                </GlassmorphicCard>
+              </FadeIn>
             </div>
           </section>
 

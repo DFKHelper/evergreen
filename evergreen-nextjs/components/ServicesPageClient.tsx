@@ -60,12 +60,12 @@ export default function ServicesPageClient() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-800/40 via-green-900/30 to-transparent" />
 
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <FadeIn direction="down" delay={0.1}>
+            <FadeIn direction="down" delay={0.1} className="w-full text-center">
               <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Who We Help
               </h1>
             </FadeIn>
-            <FadeIn direction="up" delay={0.3}>
+            <FadeIn direction="up" delay={0.3} className="w-full text-center">
               <p className="text-xl text-gray-100">
                 Specific Gonstead chiropractic care for every member of your family
               </p>

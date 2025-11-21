@@ -32,6 +32,23 @@ export default function VisceralTherapyPageClient() {
             </div>
           </section>
 
+          {/* Main Image */}
+          <section className="py-8 px-4 sm:px-6 lg:px-8 relative">
+            <div className="max-w-3xl mx-auto">
+              <FadeIn direction="up">
+                <div className="rounded-3xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/visceral-2.png"
+                    alt="Visceral Therapy Treatment"
+                    width={1200}
+                    height={800}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </FadeIn>
+            </div>
+          </section>
+
           {/* What is Visceral Therapy */}
           <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
             <div className="max-w-4xl mx-auto">
@@ -88,10 +105,10 @@ export default function VisceralTherapyPageClient() {
               <FadeIn direction="up" delay={0.3}>
                 <div className="relative h-[400px] sm:h-[500px] rounded-3xl overflow-hidden shadow-xl">
                   <Image
-                    src="https://images.squarespace-cdn.com/content/v1/5c5a1545b2cf791f213739eb/11c9e092-73f3-4b11-9dc3-f3dbcaa119ad/IMG_9806.jpg?format=750w"
+                    src="/visceral-1.jpg"
                     alt="Visceral Therapy at Evergreen Chiropractic"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[center_35%]"
                     sizes="(max-width: 768px) 100vw, 672px"
                   />
                 </div>

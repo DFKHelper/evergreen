@@ -352,7 +352,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
                 <h3 className="font-bold text-white mb-2">Email</h3>
                 <motion.a
                   href={`mailto:${settings?.contactEmail || 'drmcgetrick@evergreenchironash.com'}`}
-                  className="text-[#6ff799] hover:text-white break-all"
+                  className="text-[#6ff799] hover:text-white text-sm"
                   whileHover={{ scale: 1.05 }}
                 >
                   {settings?.contactEmail || 'drmcgetrick@evergreenchironash.com'}

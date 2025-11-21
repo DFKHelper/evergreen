@@ -7,7 +7,7 @@ interface NatureBackgroundProps {
   children: ReactNode
   className?: string
   showTrees?: boolean
-  variant?: 'forest' | 'subtle' | 'lush'
+  variant?: 'forest' | 'subtle' | 'lush' | 'vibrant'
 }
 
 export default function NatureBackground({
@@ -19,7 +19,8 @@ export default function NatureBackground({
   const gradients = {
     forest: 'from-green-900/20 via-emerald-800/10 to-teal-900/20',
     subtle: 'from-green-50/40 via-emerald-50/30 to-teal-50/40',
-    lush: 'from-emerald-600/20 via-green-700/15 to-teal-600/20'
+    lush: 'from-emerald-600/20 via-green-700/15 to-teal-600/20',
+    vibrant: 'from-emerald-500/25 via-green-600/20 to-teal-500/25'
   }
 
   return (
@@ -39,7 +40,7 @@ export default function NatureBackground({
           <div className="absolute left-[2%] top-0 flex items-end gap-0 opacity-30">
             <SwayingTree delay={0} size="small" />
             <div className="-ml-4">
-              <SwayingTree delay={0.3} size="large" />
+              <SwayingTree delay={0.3} size="large" spineTrunk />
             </div>
             <div className="-ml-4">
               <SwayingTree delay={0.6} size="small" />
@@ -50,7 +51,7 @@ export default function NatureBackground({
           <div className="absolute right-[2%] top-10 flex items-end gap-0 opacity-30">
             <SwayingTree delay={1.5} size="small" />
             <div className="-ml-4">
-              <SwayingTree delay={1.8} size="large" />
+              <SwayingTree delay={1.8} size="large" spineTrunk />
             </div>
             <div className="-ml-4">
               <SwayingTree delay={2.1} size="small" />
@@ -61,7 +62,7 @@ export default function NatureBackground({
           <div className="absolute left-[3%] top-[40%] flex items-end gap-0 opacity-25">
             <SwayingTree delay={0.8} size="small" />
             <div className="-ml-4">
-              <SwayingTree delay={1.1} size="large" />
+              <SwayingTree delay={1.1} size="large" spineTrunk />
             </div>
             <div className="-ml-4">
               <SwayingTree delay={1.4} size="small" />
@@ -72,7 +73,7 @@ export default function NatureBackground({
           <div className="absolute right-[3%] top-[50%] flex items-end gap-0 opacity-25">
             <SwayingTree delay={2.3} size="small" />
             <div className="-ml-4">
-              <SwayingTree delay={2.6} size="large" />
+              <SwayingTree delay={2.6} size="large" spineTrunk />
             </div>
             <div className="-ml-4">
               <SwayingTree delay={2.9} size="small" />
@@ -89,7 +90,7 @@ export default function NatureBackground({
   )
 }
 
-function SwayingTree({ delay, size }: { delay: number, size: 'small' | 'medium' | 'large' }) {
+function SwayingTree({ delay, size, spineTrunk = false }: { delay: number, size: 'small' | 'medium' | 'large', spineTrunk?: boolean }) {
   const sizes = {
     small: 80,
     medium: 120,
@@ -116,23 +117,60 @@ function SwayingTree({ delay, size }: { delay: number, size: 'small' | 'medium' 
       }}
       style={{ transformOrigin: 'bottom center' }}
     >
-      {/* Tree trunk */}
-      <motion.rect
-        x="45"
-        y="120"
-        width="10"
-        height="80"
-        fill="url(#trunkGradient)"
-        animate={{
-          scaleX: [1, 0.98, 1, 1.02, 1]
-        }}
-        transition={{
-          duration: 8,
-          delay,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
+      {/* Tree trunk - spine shape for middle tree, rectangle for others */}
+      {spineTrunk ? (
+        <motion.g
+          animate={{
+            scaleX: [1, 0.98, 1, 1.02, 1]
+          }}
+          transition={{
+            duration: 8,
+            delay,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          style={{ transformOrigin: 'center' }}
+        >
+          {/* Gentle S-curve spine - healthy human spine shape */}
+          <path
+            d="
+              M 50 120
+              Q 55 135 54 150
+              Q 52 165 46 180
+              Q 44 190 48 200
+            "
+            fill="none"
+            stroke="url(#trunkGradient)"
+            strokeWidth="4"
+            strokeLinecap="round"
+          />
+          {/* Vertebrae - angled to follow the gentle curve */}
+          <ellipse cx="51" cy="125" rx="8" ry="2" fill="url(#trunkGradient)" transform="rotate(-12 51 125)" />
+          <ellipse cx="53" cy="137" rx="9" ry="2" fill="url(#trunkGradient)" transform="rotate(-6 53 137)" />
+          <ellipse cx="54" cy="150" rx="10" ry="2.5" fill="url(#trunkGradient)" transform="rotate(0 54 150)" />
+          <ellipse cx="52" cy="162" rx="10" ry="2.5" fill="url(#trunkGradient)" transform="rotate(8 52 162)" />
+          <ellipse cx="48" cy="174" rx="10" ry="2.5" fill="url(#trunkGradient)" transform="rotate(12 48 174)" />
+          <ellipse cx="46" cy="185" rx="9" ry="2" fill="url(#trunkGradient)" transform="rotate(6 46 185)" />
+          <ellipse cx="47" cy="194" rx="8" ry="2" fill="url(#trunkGradient)" transform="rotate(-8 47 194)" />
+        </motion.g>
+      ) : (
+        <motion.rect
+          x="45"
+          y="120"
+          width="10"
+          height="80"
+          fill="url(#trunkGradient)"
+          animate={{
+            scaleX: [1, 0.98, 1, 1.02, 1]
+          }}
+          transition={{
+            duration: 8,
+            delay,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      )}
 
       {/* Tree foliage - top triangle */}
       <motion.path
