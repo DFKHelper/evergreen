@@ -16,6 +16,16 @@ const nextConfig: NextConfig = {
     }
     return config;
   },
+
+  // Allow external images
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.squarespace-cdn.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

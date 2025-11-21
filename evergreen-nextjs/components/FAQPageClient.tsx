@@ -78,6 +78,10 @@ const faqs = [
     question: 'I\'ve heard that once you get adjusted, you have to keep getting adjusted. Is that true?',
     answer: 'This is only true if you want to utilize the gift of chiropractic as a lifestyle, similar to an exercise, dental, or wellness program. By receiving regular chiropractic adjustments, people find that they have more energy and motivation, handle stress better, perform better, sleep better, amongst many other things.',
   },
+  {
+    question: 'Do you accept insurance?',
+    answer: 'We do not accept insurance because we want to make sure you and your family get the care you DESERVE. We strive to provide the BEST quality of care while keeping it affordable - especially for families! We choose to let each patient have the FREEDOM to choose what is best for themselves and their families. In this office we work for you, not a premium. However, we DO accept HSA cards, FSA cards, and provide superbills for out-of-network reimbursement.',
+  },
 ]
 
 export default function FAQPageClient() {
@@ -124,7 +128,7 @@ export default function FAQPageClient() {
                       >
                         <span className="font-semibold text-white pr-8">{faq.question}</span>
                         <svg
-                          className={`w-5 h-5 text-emerald-600 transition-transform flex-shrink-0 ${
+                          className={`w-5 h-5 text-[#6ff799] transition-transform flex-shrink-0 ${
                             openIndex === index ? 'transform rotate-180' : ''
                           }`}
                           fill="none"
@@ -158,9 +162,6 @@ export default function FAQPageClient() {
 
         {/* CTA */}
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 text-white text-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-[url('/nature-1.png')] bg-cover bg-center" />
-          </div>
           <div className="max-w-3xl mx-auto relative z-10">
             <FadeIn direction="up">
               <h2 className="text-3xl font-bold mb-4">Still Have Questions?</h2>

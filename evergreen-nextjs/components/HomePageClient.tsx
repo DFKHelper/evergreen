@@ -78,7 +78,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
       </section>
 
       {/* Featured Services with Nature Background */}
-      <section className="relative overflow-hidden mx-4 sm:mx-6 lg:mx-8 rounded-3xl mb-4">
+      <section className="relative mx-4 sm:mx-6 lg:mx-8 rounded-3xl mb-4">
         <NatureBackground variant="vibrant" showTrees={true} className="py-16 px-6 sm:px-8 lg:px-12">
           <div className="max-w-7xl mx-auto relative z-10">
             <FadeIn direction="up" className="text-center mb-12">
@@ -140,23 +140,17 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
                           </motion.div>
                         ) : (
                           <motion.div
-                            className="text-emerald-700 mb-4"
-                            whileHover={{ rotate: 10, scale: 1.1 }}
+                            className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center"
+                            whileHover={{ scale: 1.05 }}
                             transition={{ type: "spring", stiffness: 300 }}
                           >
-                            <svg
-                              className="w-12 h-12"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M13 10V3L4 14h7v7l9-11h-7z"
-                              />
-                            </svg>
+                            <Image
+                              src="/athletes.png"
+                              alt="Athletes - Peak performance care"
+                              width={160}
+                              height={120}
+                              className="rounded-2xl"
+                            />
                           </motion.div>
                         )}
                         <h3 className="text-xl font-bold text-white mb-2">
@@ -194,7 +188,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
 
       {/* Why Choose Us */}
       <section className="relative overflow-hidden mx-4 sm:mx-6 lg:mx-8 rounded-3xl">
-        <NatureBackground variant="lush" showTrees={false} className="py-16 px-6 sm:px-8 lg:px-12">
+        <NatureBackground variant="lush" showTrees={false} className="py-10 px-6 sm:px-8 lg:px-12">
           <div className="max-w-7xl mx-auto">
             <FadeIn direction="up" className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -209,7 +203,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
               <StaggerItem>
                 <GlassmorphicCard variant="strong" className="p-6 h-full flex flex-col items-center">
                   <motion.div
-                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center"
+                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center w-[200px] h-[150px]"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
@@ -218,7 +212,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
                       alt="Specific Analysis - Doctors examining spine x-ray"
                       width={200}
                       height={150}
-                      className="rounded-2xl"
+                      className="rounded-2xl object-cover w-full h-full"
                     />
                   </motion.div>
                   <h3 className="text-xl font-bold text-white mb-2 text-center">Specific Analysis</h3>
@@ -231,7 +225,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
               <StaggerItem>
                 <GlassmorphicCard variant="strong" className="p-6 h-full flex flex-col items-center">
                   <motion.div
-                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center"
+                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center w-[200px] h-[150px]"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
@@ -240,7 +234,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
                       alt="Precise Adjustments - Gonstead technique"
                       width={200}
                       height={150}
-                      className="rounded-2xl"
+                      className="rounded-2xl object-cover w-full h-full"
                     />
                   </motion.div>
                   <h3 className="text-xl font-bold text-white mb-2 text-center">Precise Adjustments</h3>
@@ -253,7 +247,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
               <StaggerItem>
                 <GlassmorphicCard variant="strong" className="p-6 h-full flex flex-col items-center">
                   <motion.div
-                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center"
+                    className="mb-4 rounded-2xl overflow-hidden flex items-center justify-center w-[200px] h-[150px]"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
@@ -262,7 +256,7 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
                       alt="Family Care - Care for all ages"
                       width={200}
                       height={150}
-                      className="rounded-2xl"
+                      className="rounded-2xl object-cover w-full h-full"
                     />
                   </motion.div>
                   <h3 className="text-xl font-bold text-white mb-2 text-center">Family Care</h3>
@@ -321,11 +315,22 @@ export default function HomePageClient({ featuredServices, settings }: HomePageC
           <StaggerContainer className="grid md:grid-cols-3 gap-8 text-center" staggerDelay={0.2}>
             <StaggerItem>
               <GlassmorphicCard variant="light" className="p-6">
-                <h3 className="font-bold text-white mb-2">Address</h3>
-                <p className="text-gray-200">
+                <h3 className="font-bold text-white mb-4">Address</h3>
+                <p className="text-gray-200 mb-4">
                   {settings?.address?.street || '1222 16th Avenue South, Ste 10'}<br />
                   {settings?.address?.city || 'Nashville'}, {settings?.address?.state || 'TN'} {settings?.address?.zip || '37212'}
                 </p>
+                <div className="rounded-xl overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.01843511678!2d-86.79316710000002!3d36.14176440000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886467ccca74c75b%3A0xc956b67bca9625d4!2sEvergreen%20Chiropractic!5e0!3m2!1sen!2sus!4v1763679645965!5m2!1sen!2sus"
+                    width="100%"
+                    height="200"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
               </GlassmorphicCard>
             </StaggerItem>
 

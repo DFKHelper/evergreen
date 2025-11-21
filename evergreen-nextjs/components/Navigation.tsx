@@ -21,8 +21,8 @@ export default function Navigation() {
                 <Image
                   src="/logo.png"
                   alt="Evergreen Chiropractic Logo"
-                  width={56}
-                  height={56}
+                  width={72}
+                  height={72}
                   className="rounded-xl brightness-110 contrast-105 saturate-105"
                 />
               </motion.div>
@@ -36,9 +36,11 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/about">About</NavLink>
-            <NavLink href="/services">Who We Help</NavLink>
+            <NavLink href="/conditions">Who We Help</NavLink>
             <NavLink href="/contact">Contact</NavLink>
             <NavLink href="/faq">FAQ</NavLink>
+            <NavLink href="/cft-gillespie">CFT</NavLink>
+            <NavLink href="/visceral-therapy">Visceral</NavLink>
             <NavLink href="/blog">Blog</NavLink>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -107,7 +109,7 @@ export default function Navigation() {
               <MobileNavLink href="/about" onClick={() => setIsOpen(false)}>
                 About
               </MobileNavLink>
-              <MobileNavLink href="/services" onClick={() => setIsOpen(false)}>
+              <MobileNavLink href="/conditions" onClick={() => setIsOpen(false)}>
                 Who We Help
               </MobileNavLink>
               <MobileNavLink href="/contact" onClick={() => setIsOpen(false)}>
@@ -115,6 +117,12 @@ export default function Navigation() {
               </MobileNavLink>
               <MobileNavLink href="/faq" onClick={() => setIsOpen(false)}>
                 FAQ
+              </MobileNavLink>
+              <MobileNavLink href="/cft-gillespie" onClick={() => setIsOpen(false)}>
+                CFT
+              </MobileNavLink>
+              <MobileNavLink href="/visceral-therapy" onClick={() => setIsOpen(false)}>
+                Visceral Therapy
               </MobileNavLink>
               <MobileNavLink href="/blog" onClick={() => setIsOpen(false)}>
                 Blog

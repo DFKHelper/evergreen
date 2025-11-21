@@ -23,6 +23,7 @@ export default function PageTransition({ children }: PageTransitionProps) {
   )
 }
 
+// Simple wrapper that just renders children - no animation delay
 export function FadeIn({
   children,
   delay = 0,
@@ -34,27 +35,17 @@ export function FadeIn({
   direction?: 'up' | 'down' | 'left' | 'right'
   className?: string
 }) {
-  const directions = {
-    up: { y: 40 },
-    down: { y: -40 },
-    left: { x: 40 },
-    right: { x: -40 }
-  }
+  // CSS animation class based on direction
+  const animationClass = `animate-fade-in-${direction}`
+  const delayStyle = delay > 0 ? { animationDelay: `${delay}s` } : {}
 
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, ...directions[direction] }}
-      whileInView={{ opacity: 1, y: 0, x: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{
-        duration: 0.8,
-        delay,
-        ease: [0.25, 0.1, 0.25, 1] as const
-      }}
+    <div
+      className={`${className} ${animationClass}`}
+      style={delayStyle}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -68,21 +59,9 @@ export function StaggerContainer({
   staggerDelay?: number
 }) {
   return (
-    <motion.div
-      className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={{
-        visible: {
-          transition: {
-            staggerChildren: staggerDelay
-          }
-        }
-      }}
-    >
+    <div className={className}>
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -94,21 +73,8 @@ export function StaggerItem({
   className?: string
 }) {
   return (
-    <motion.div
-      className={className}
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.6,
-            ease: [0.25, 0.1, 0.25, 1] as const
-          }
-        }
-      }}
-    >
+    <div className={`${className} animate-fade-in-up`}>
       {children}
-    </motion.div>
+    </div>
   )
 }

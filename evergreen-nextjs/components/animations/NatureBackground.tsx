@@ -36,20 +36,41 @@ export default function NatureBackground({
       {showTrees && (
         <>
           {/* Swaying trees in background - static position */}
-          <div className="absolute left-[5%] top-0 opacity-10">
+          <div className="absolute left-[5%] top-0 opacity-30">
             <SwayingTree delay={0} size="large" />
           </div>
 
-          <div className="absolute right-[10%] top-10 opacity-15">
+          <div className="absolute right-[10%] top-10 opacity-40">
             <SwayingTree delay={1.5} size="medium" />
           </div>
 
-          <div className="absolute left-[15%] top-20 opacity-12">
+          <div className="absolute left-[15%] top-20 opacity-35">
             <SwayingTree delay={0.8} size="small" />
           </div>
 
-          <div className="absolute right-[5%] top-40 opacity-10">
+          <div className="absolute right-[5%] top-40 opacity-30">
             <SwayingTree delay={2} size="medium" />
+          </div>
+
+          {/* Middle section trees */}
+          <div className="absolute left-[8%] top-[35%] opacity-35">
+            <SwayingTree delay={1.2} size="medium" />
+          </div>
+
+          <div className="absolute right-[15%] top-[45%] opacity-30">
+            <SwayingTree delay={2.5} size="small" />
+          </div>
+
+          <div className="absolute left-[20%] top-[55%] opacity-40">
+            <SwayingTree delay={0.5} size="large" />
+          </div>
+
+          <div className="absolute right-[8%] top-[65%] opacity-35">
+            <SwayingTree delay={1.8} size="medium" />
+          </div>
+
+          <div className="absolute left-[12%] top-[30%] opacity-30">
+            <SwayingTree delay={0.3} size="small" />
           </div>
         </>
       )}
