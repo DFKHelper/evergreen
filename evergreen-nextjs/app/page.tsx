@@ -44,6 +44,7 @@ export default async function HomePage() {
                 <Link
                   href={settings?.bookingUrl || 'https://evergreenchironash.janeapp.com'}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-3 border-2 border-[#6ff799] text-base font-medium rounded-2xl text-white bg-[#6ff799]/20 hover:bg-[#6ff799] hover:text-emerald-900 transition-colors shadow-lg backdrop-blur-sm"
                 >
                   Book an Appointment

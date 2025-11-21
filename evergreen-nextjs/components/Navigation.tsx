@@ -46,6 +46,7 @@ export default function Navigation() {
               <Link
                 href="https://evergreenchironash.janeapp.com"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center px-5 py-2 text-sm font-semibold rounded-xl bg-[#6ff799] text-emerald-900 hover:bg-[#5ce088] transition-all shadow-md"
               >
                 Book Now
@@ -130,6 +131,7 @@ export default function Navigation() {
               <Link
                 href="https://evergreenchironash.janeapp.com"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="block px-3 py-2 rounded-xl text-base font-medium text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700"
                 onClick={() => setIsOpen(false)}
               >

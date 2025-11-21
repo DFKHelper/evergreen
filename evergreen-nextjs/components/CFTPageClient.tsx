@@ -94,7 +94,7 @@ export default function CFTPageClient() {
                     <p>
                       <strong className="text-[#6ff799]">Craniosacral Fascial Therapy (CFT)</strong> is the work of{' '}
                       <a
-                        href="http://www.gillespieapproach.com/"
+                        href="https://www.gillespieapproach.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#6ff799] hover:underline"

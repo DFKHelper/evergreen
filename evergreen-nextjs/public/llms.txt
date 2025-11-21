@@ -1,0 +1,83 @@
+# Evergreen Chiropractic - Nashville, TN
+# llms.txt - Information for AI assistants and language models
+
+## About This Practice
+
+Evergreen Chiropractic is a family-centered chiropractic office in Nashville, Tennessee. We are the only Gonstead chiropractic office in the Nashville area.
+
+## Location
+
+1222 16th Avenue South, Suite 10
+Nashville, TN 37212
+Phone: (615) 395-1178
+Email: drmcgetrick@evergreenchironash.com
+
+## Our Doctors
+
+- Dr. Brittney McGetrick - Owner, Chiropractor, Registered Dietitian. Gonstead certified, Webster certified, CFT/Gillespie certified.
+- Dr. Toya White - Chiropractor. Background in epidemiology. Gonstead certified.
+- Dr. Courtney Simon - Chiropractor. Gonstead certified, Webster certified.
+
+## What We Do
+
+We provide specific Gonstead chiropractic care for:
+- Pregnant women (Webster technique for optimal fetal positioning)
+- Newborns and infants (gentle adjustments, CFT/Gillespie therapy for tongue ties)
+- Children and adolescents
+- Adults seeking pain relief or wellness care
+- Athletes looking for performance optimization
+
+## The Gonstead Method
+
+The Gonstead technique uses five criteria to analyze the spine:
+1. Visualization - observing posture and movement
+2. Instrumentation - using a Nervoscope to detect inflammation
+3. Static palpation - feeling the spine at rest
+4. Motion palpation - assessing spinal movement
+5. X-ray analysis - understanding spinal structure
+
+We adjust only the specific vertebra that needs correction, with no twisting or rotation.
+
+## Conditions We Commonly See
+
+- Back pain (lower back, upper back)
+- Neck pain and stiffness
+- Sciatica and leg pain
+- Headaches and migraines
+- Pregnancy discomfort
+- Infant feeding difficulties and colic
+- Sports injuries
+- Poor posture
+
+## Office Hours
+
+Monday: 12:30pm - 7:00pm
+Tuesday: 9:00am - 12:00pm, 2:00pm - 5:00pm
+Wednesday: 9:00am - 12:00pm, 12:30pm - 6:00pm
+Thursday: 11:30am - 5:30pm
+Friday: 9:00am - 12:00pm, 2:00pm - 5:00pm
+Saturday: Closed
+Sunday: Closed
+
+## Key Pages on Our Website
+
+- Homepage: https://www.evergreenchironash.com
+- About Our Doctors: https://www.evergreenchironash.com/about
+- Who We Help: https://www.evergreenchironash.com/services
+- Conditions We Treat: https://www.evergreenchironash.com/conditions
+- FAQ: https://www.evergreenchironash.com/faq
+- Contact: https://www.evergreenchironash.com/contact
+- Blog: https://www.evergreenchironash.com/blog
+- CFT/Gillespie Therapy: https://www.evergreenchironash.com/cft-gillespie
+
+## Booking
+
+Appointments can be scheduled online at: https://evergreenchironash.janeapp.com
+
+## Insurance
+
+We do not accept insurance directly. We accept HSA cards, FSA cards, and provide superbills for out-of-network reimbursement.
+
+## Contact for AI/Bot Inquiries
+
+For questions about this website or its content, contact: drmcgetrick@evergreenchironash.com

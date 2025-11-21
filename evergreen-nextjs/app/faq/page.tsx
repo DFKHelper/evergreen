@@ -1,10 +1,148 @@
+import { Metadata } from 'next'
 import FAQPageClient from '@/components/FAQPageClient'
+import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
-export const metadata = {
-  title: 'FAQ - Evergreen Chiropractic Nashville',
-  description: 'Common questions about Gonstead chiropractic care and what to expect at Evergreen Chiropractic in Nashville.',
+export const metadata: Metadata = {
+  title: 'Frequently Asked Questions',
+  description:
+    'Got questions about chiropractic care? Find answers about Gonstead adjustments, what to expect at your first visit, insurance, kids, and more.',
+  alternates: {
+    canonical: 'https://www.evergreenchironash.com/faq',
+  },
+  openGraph: {
+    title: 'FAQ | Evergreen Chiropractic Nashville',
+    description:
+      'Got questions about chiropractic care? Find answers about Gonstead adjustments, first visits, insurance, kids, and more.',
+    url: 'https://www.evergreenchironash.com/faq',
+    images: [
+      {
+        url: 'https://www.evergreenchironash.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Evergreen Chiropractic FAQ',
+      },
+    ],
+  },
 }
 
+// FAQ data for schema (matches visible content on page)
+const faqData = [
+  {
+    question: 'What is a chiropractic adjustment?',
+    answer:
+      'It is a small thrust applied to the body (misaligned vertebra) from the hands of a chiropractor.',
+  },
+  {
+    question: 'Will I see results right away?',
+    answer:
+      'This depends on a number of things like the nature and history of the illness. Sometimes, chiropractic results may be achieved very quickly. Other times, it may take weeks to months because of changes that have occurred in the body in response to the subluxation(s).',
+  },
+  {
+    question: 'Will my pain be relieved?',
+    answer:
+      'In many instances, taking pressure off the nerve is all that is needed for relief of pain.',
+  },
+  {
+    question: 'Can children be adjusted too?',
+    answer:
+      'Yes! It is best to have children checked for subluxations as early as possible. This will ensure that they are fulfilling their own potential to live and grow as healthy as they can.',
+  },
+  {
+    question:
+      'What is the difference between what Evergreen docs do and other chiropractors?',
+    answer:
+      'The biggest difference is the Gonstead Difference. Our doctors use the Gonstead System of analyzing and adjusting the spine which means that we are very specific in finding your problem areas and in delivering precise adjustments.',
+  },
+  {
+    question: 'Can chiropractic help more than just back pain?',
+    answer:
+      'Absolutely. It can help because when you receive a chiropractic adjustment, nerve interference is removed which allows your body to function better. Simply put, it helps your immune system kick in so that your body can heal itself.',
+  },
+  {
+    question: 'Can chiropractic help me?',
+    answer:
+      'Chiropractic care will benefit almost everyone in some way, just as dental care will benefit almost everyone in some way. How you respond depends on how long you have dealt with your pain/symptoms, your lifestyle and your compliance to the care plan.',
+  },
+  {
+    question: 'How many visits will I need?',
+    answer:
+      "That depends on your unique situation. Each injury/situation is different and each individual's healing response is different. I will give each patient an estimate on how long their recovery may take after the initial exam and will have an even better idea after 2-3 visits. This office does not have the same \"3x a week for 6 weeks\" approach for every patient.",
+  },
+  {
+    question: 'Are chiropractic adjustments safe?',
+    answer:
+      'Absolutely! In fact, a New Zealand government study found that adjustments are "remarkably safe." It is the result of biologically sound, specific adjustments without the use of drugs or surgeries that has given Chiropractic care an excellent safety record.',
+  },
+  {
+    question: 'How do I know if I have a subluxation (misalignment)?',
+    answer:
+      'Oftentimes you can have a subluxation and not even know it! They can be present before you have obvious symptoms, like the progression of tooth decay. The best thing for you and your family is to be checked in our office with a thorough examination for the presence and severity of subluxations.',
+  },
+  {
+    question: 'Can I adjust myself?',
+    answer:
+      'No. Turning your body or neck in one direction and/or the other may make your joints "pop", but that sound is not correcting the problem and certainly is not an adjustment! Only a licensed Chiropractor is able to adjust the actual misaligned vertebra that\'s really causing the tension.',
+  },
+  {
+    question: 'Are you going to "crack" my whole spine?',
+    answer:
+      'As Gonstead Chiropractors, we carefully analyze your spine to determine which segments need to be adjusted and which should be left alone. With Chiropractic care, more is not better. The goal is to correct the exact cause of the problem and let your body do the rest of the healing.',
+  },
+  {
+    question: 'Why do newborns get adjustments?',
+    answer:
+      "The birth process, no matter how natural, can affect an infant's spine. Some studies suggest that colic, unusual crying, poor appetite, ear infection or erratic sleeping habits can be signs of spinal distress. A newborn is examined very carefully to determine if there is a subluxation and, if needed, receives a gentle Gonstead adjustment involving very little pressure.",
+  },
+  {
+    question: 'Do I have a slipped disk?',
+    answer:
+      'No. The disc is a cartilage pad between each of your spinal vertebra that aides in your spine\'s connection, flexibility, movement, weight bearing & shock absorbing ability. Because of spinal subluxations or severe trauma a disc can bulge, swell, tear, herniate, thin, dry out or collapse but it can\'t actually "slip" out from between the spinal bones it serves.',
+  },
+  {
+    question: "I've had back surgery, can you still help?",
+    answer:
+      'Yes. Surgery often leads to instability in your spine above or below the area operated on. Your Gonstead Chiropractor will be very specific to your problem areas and will avoid the surgically altered segments.',
+  },
+  {
+    question: 'How long until I feel better?',
+    answer:
+      'Happily, a lot of our patients have reported immediate relief. Others experience slow progress over a period of days or weeks. There are many factors that play a role in your healing process, including the severity or length of your injury. Other factors include proper rest, nutrition, exercise, keeping your appointments and closely following our doctors recommendations.',
+  },
+  {
+    question:
+      "I've heard that once you get adjusted, you have to keep getting adjusted. Is that true?",
+    answer:
+      'This is only true if you want to utilize the gift of chiropractic as a lifestyle, similar to an exercise, dental, or wellness program. By receiving regular chiropractic adjustments, people find that they have more energy and motivation, handle stress better, perform better, sleep better, amongst many other things.',
+  },
+  {
+    question: 'Do you accept insurance?',
+    answer:
+      'We do not accept insurance because we want to make sure you and your family get the care you DESERVE. We strive to provide the BEST quality of care while keeping it affordable - especially for families! We choose to let each patient have the FREEDOM to choose what is best for themselves and their families. In this office we work for you, not a premium. However, we DO accept HSA cards, FSA cards, and provide superbills for out-of-network reimbursement.',
+  },
+]
+
 export default function FAQPage() {
-  return <FAQPageClient />
+  const faqSchema = generateFAQSchema(faqData)
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.evergreenchironash.com' },
+    { name: 'FAQ', url: 'https://www.evergreenchironash.com/faq' },
+  ])
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <FAQPageClient />
+    </>
+  )
 }
