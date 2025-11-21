@@ -97,7 +97,7 @@ export default function ConditionsPage() {
           __html: JSON.stringify(breadcrumbSchema),
         }}
       />
-      <NatureBackground variant="subtle" showTrees={false}>
+      <NatureBackground variant="subtle" showTrees={true}>
         <div className="min-h-screen relative">
           <div className="relative z-10">
             {/* Hero */}

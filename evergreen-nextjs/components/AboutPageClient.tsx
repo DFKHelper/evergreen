@@ -66,7 +66,7 @@ export default function AboutPageClient({
   const teamMembers = authors.length > 0 ? authors : defaultTeam
 
   return (
-    <NatureBackground variant="subtle" showTrees={false}>
+    <NatureBackground variant="subtle" showTrees={true}>
       <div className="min-h-screen relative">
         {/* Content */}
         <div className="relative z-10">
