@@ -36,11 +36,10 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/about">About</NavLink>
+            <NavLink href="/new-patient">New Patient</NavLink>
             <NavLink href="/conditions">Who We Help</NavLink>
             <NavLink href="/contact">Contact</NavLink>
             <NavLink href="/faq">FAQ</NavLink>
-            <NavLink href="/cft-gillespie">CFT</NavLink>
-            <NavLink href="/visceral-therapy">Visceral</NavLink>
             <NavLink href="/blog">Blog</NavLink>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex items-center">
               <Link
@@ -110,6 +109,9 @@ export default function Navigation() {
               <MobileNavLink href="/about" onClick={() => setIsOpen(false)}>
                 About
               </MobileNavLink>
+              <MobileNavLink href="/new-patient" onClick={() => setIsOpen(false)}>
+                New Patient
+              </MobileNavLink>
               <MobileNavLink href="/conditions" onClick={() => setIsOpen(false)}>
                 Who We Help
               </MobileNavLink>
@@ -118,12 +120,6 @@ export default function Navigation() {
               </MobileNavLink>
               <MobileNavLink href="/faq" onClick={() => setIsOpen(false)}>
                 FAQ
-              </MobileNavLink>
-              <MobileNavLink href="/cft-gillespie" onClick={() => setIsOpen(false)}>
-                CFT
-              </MobileNavLink>
-              <MobileNavLink href="/visceral-therapy" onClick={() => setIsOpen(false)}>
-                Visceral Therapy
               </MobileNavLink>
               <MobileNavLink href="/blog" onClick={() => setIsOpen(false)}>
                 Blog
