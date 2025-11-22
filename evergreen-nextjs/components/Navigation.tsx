@@ -37,7 +37,8 @@ export default function Navigation() {
             <NavLink href="/">Home</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/new-patient">New Patient</NavLink>
-            <NavLink href="/conditions">Who We Help</NavLink>
+            <NavLink href="/services">Who We Help</NavLink>
+            <NavLink href="/conditions">Conditions</NavLink>
             <NavLink href="/contact">Contact</NavLink>
             <NavLink href="/faq">FAQ</NavLink>
             <NavLink href="/blog">Blog</NavLink>
@@ -112,8 +113,11 @@ export default function Navigation() {
               <MobileNavLink href="/new-patient" onClick={() => setIsOpen(false)}>
                 New Patient
               </MobileNavLink>
-              <MobileNavLink href="/conditions" onClick={() => setIsOpen(false)}>
+              <MobileNavLink href="/services" onClick={() => setIsOpen(false)}>
                 Who We Help
+              </MobileNavLink>
+              <MobileNavLink href="/conditions" onClick={() => setIsOpen(false)}>
+                Conditions
               </MobileNavLink>
               <MobileNavLink href="/contact" onClick={() => setIsOpen(false)}>
                 Contact
