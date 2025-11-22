@@ -108,7 +108,7 @@ export default function ConditionsPage() {
               <div className="max-w-4xl mx-auto text-center relative z-10">
                 <FadeIn direction="down" delay={0.1}>
                   <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                    Conditions We Treat
+                    Other Conditions We Treat
                   </h1>
                 </FadeIn>
                 <FadeIn direction="up" delay={0.3}>
