@@ -432,7 +432,7 @@ export default function NewPatientClient() {
                       </div>
                       <div>
                         <h4 className="text-[#6ff799] font-semibold mb-2">Email</h4>
-                        <a href="mailto:drmcgetrick@evergreenchironash.com" className="text-gray-100 hover:text-[#6ff799] transition-colors break-all">
+                        <a href="mailto:drmcgetrick@evergreenchironash.com" className="text-gray-100 hover:text-[#6ff799] transition-colors whitespace-nowrap text-sm md:text-base">
                           drmcgetrick@evergreenchironash.com
                         </a>
                       </div>

@@ -76,7 +76,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:drmcgetrick@evergreenchironash.com" className="hover:text-[#6ff799] transition-colors break-all">
+                <a href="mailto:drmcgetrick@evergreenchironash.com" className="hover:text-[#6ff799] transition-colors whitespace-nowrap text-xs sm:text-sm">
                   drmcgetrick@evergreenchironash.com
                 </a>
               </li>
