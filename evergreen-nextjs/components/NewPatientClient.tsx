@@ -228,9 +228,9 @@ export default function NewPatientClient() {
                 </p>
               </FadeIn>
 
-              <div className="grid lg:grid-cols-2 gap-5 mb-8">
-                <FadeIn direction="right" delay={0.1}>
-                  <GlassmorphicCard variant="strong" className="p-5 h-full">
+              <div className="max-w-2xl mx-auto mb-8">
+                <FadeIn direction="up" delay={0.1}>
+                  <GlassmorphicCard variant="strong" className="p-5">
                     <div className="rounded-xl overflow-hidden mb-4 shadow-lg">
                       <Image
                         src="/gonstead-xrays-nervoscope.png"
@@ -243,7 +243,7 @@ export default function NewPatientClient() {
                     <h3 className="text-xl font-bold text-white mb-3">
                       We are the only office in Nashville that practices this technique
                     </h3>
-                    <ul className="space-y-2 text-gray-100">
+                    <ul className="space-y-2 text-gray-100 mb-4">
                       <li className="flex items-start gap-3">
                         <svg className="w-5 h-5 text-[#6ff799] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -269,46 +269,12 @@ export default function NewPatientClient() {
                         <span>One bone at a time approach</span>
                       </li>
                     </ul>
-                  </GlassmorphicCard>
-                </FadeIn>
-
-                <FadeIn direction="left" delay={0.2}>
-                  <GlassmorphicCard variant="strong" className="p-5 h-full">
-                    <div className="grid grid-cols-2 gap-3 mb-4">
-                      <div className="rounded-2xl overflow-hidden shadow-lg">
-                        <Image
-                          src="/gonstead-technique-1.png"
-                          alt="Gonstead technique demonstration"
-                          width={300}
-                          height={225}
-                          className="w-full h-auto"
-                        />
-                      </div>
-                      <div className="rounded-2xl overflow-hidden shadow-lg">
-                        <Image
-                          src="/gonstead-technique-2.png"
-                          alt="Gonstead adjustment"
-                          width={300}
-                          height={225}
-                          className="w-full h-auto"
-                        />
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2">
+                    <h4 className="text-lg font-bold text-white mb-2">
                       No twisting. No "ninja moves."
-                    </h3>
-                    <p className="text-gray-100 mb-4">
+                    </h4>
+                    <p className="text-gray-100">
                       We are chiropractors for people scared of chiropractors. Our gentle, specific approach means no surprises and no unnecessary manipulation.
                     </p>
-                    <div className="rounded-2xl overflow-hidden shadow-lg">
-                      <Image
-                        src="/gonstead-no-rotation.png"
-                        alt="No rotation adjustment technique"
-                        width={400}
-                        height={300}
-                        className="w-full h-auto"
-                      />
-                    </div>
                   </GlassmorphicCard>
                 </FadeIn>
               </div>
@@ -331,35 +297,22 @@ export default function NewPatientClient() {
 
           {/* Insurance & Payment */}
           <section className="py-8 px-4 sm:px-6 lg:px-8 relative">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-2xl mx-auto">
               <FadeIn direction="up">
                 <GlassmorphicCard variant="medium" className="p-5 md:p-8">
-                  <div className="grid md:grid-cols-2 gap-6 items-center">
-                    <div>
-                      <h2 className="text-2xl font-bold text-white mb-4">
-                        Insurance & Payment
-                      </h2>
-                      <div className="space-y-3 text-gray-100 text-sm">
-                        <p>
-                          <strong className="text-[#6ff799]">We do not accept insurance.</strong> This allows us to ensure quality care at affordable prices without the restrictions insurance companies often impose.
-                        </p>
-                        <p>
-                          We accept HSA and FSA cards. We also provide superbills for out-of-network reimbursement if your insurance covers it.
-                        </p>
-                        <p>
-                          Your health decisions should be between you and your doctor, not an insurance company. This model gives you the freedom to choose the care that is best for you.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="rounded-2xl overflow-hidden shadow-lg">
-                      <Image
-                        src="/dr-toya-booking.png"
-                        alt="Insurance and payment information"
-                        width={400}
-                        height={300}
-                        className="w-full h-auto"
-                      />
-                    </div>
+                  <h2 className="text-2xl font-bold text-white mb-4">
+                    Insurance & Payment
+                  </h2>
+                  <div className="space-y-3 text-gray-100 text-sm">
+                    <p>
+                      <strong className="text-[#6ff799]">We do not accept insurance.</strong> This allows us to ensure quality care at affordable prices without the restrictions insurance companies often impose.
+                    </p>
+                    <p>
+                      We accept HSA and FSA cards. We also provide superbills for out-of-network reimbursement if your insurance covers it.
+                    </p>
+                    <p>
+                      Your health decisions should be between you and your doctor, not an insurance company. This model gives you the freedom to choose the care that is best for you.
+                    </p>
                   </div>
                 </GlassmorphicCard>
               </FadeIn>
