@@ -16,7 +16,7 @@ const practitioners = [
     name: 'Dr. Toya',
     title: 'Chiropractor',
     specialty: 'Specializes in visceral therapy',
-    image: '/dr-toya-booking.png',
+    image: '/dr-courtney-booking.png',
     bookingUrl: 'https://evergreenchironash.janeapp.com/#/staff_member/5',
     learnMoreUrl: '/visceral-therapy',
     learnMoreText: 'Learn about visceral therapy',
@@ -25,21 +25,21 @@ const practitioners = [
     name: 'Dr. Courtney',
     title: 'Chiropractor',
     specialty: 'Webster certified, multiple therapy types',
-    image: '/dr-courtney-booking.png',
+    image: '/dr-kallie-booking.png',
     bookingUrl: 'https://evergreenchironash.janeapp.com/#/staff_member/9',
   },
   {
     name: 'Intern Dr. Kallie',
     title: 'Chiropractic Intern',
     specialty: 'Associate practitioner',
-    image: '/dr-kallie-booking.png',
+    image: '/dr-brittney-booking.png',
     bookingUrl: 'https://evergreenchironash.janeapp.com/#/staff_member/10',
   },
   {
     name: 'Dr. Brittney',
     title: 'Owner & Chiropractor, R.D.',
     specialty: 'Gonstead, Webster, CFT/Gillespie certified',
-    image: '/dr-brittney-booking.png',
+    image: '/meghan-booking.png',
     bookingUrl: 'https://evergreenchironash.janeapp.com/#/staff_member/1',
     learnMoreUrl: '/cft-gillespie',
     learnMoreText: 'Learn more about CFT',
@@ -48,7 +48,7 @@ const practitioners = [
     name: 'Meghan',
     title: 'Massage Therapist',
     specialty: 'Therapeutic massage',
-    image: '/meghan-booking.png',
+    image: '/insurance-info.png',
     bookingUrl: 'https://evergreenchironash.janeapp.com/#/staff_member/7',
   },
 ]
@@ -353,7 +353,7 @@ export default function NewPatientClient() {
                     </div>
                     <div className="rounded-2xl overflow-hidden shadow-lg">
                       <Image
-                        src="/insurance-info.png"
+                        src="/dr-toya-booking.png"
                         alt="Insurance and payment information"
                         width={400}
                         height={300}
