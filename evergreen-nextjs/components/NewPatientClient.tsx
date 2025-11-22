@@ -162,7 +162,7 @@ export default function NewPatientClient() {
               </FadeIn>
 
               <StaggerContainer staggerDelay={0.1}>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid md:grid-cols-2 gap-4">
                   {practitioners.map((practitioner) => (
                     <StaggerItem key={practitioner.name}>
                       <GlassmorphicCard variant="medium" className="p-4 h-full flex flex-col">
@@ -187,7 +187,7 @@ export default function NewPatientClient() {
                               rel="noopener noreferrer"
                               className="block w-full text-center px-3 py-2 bg-[#6ff799] text-emerald-900 font-semibold rounded-lg hover:bg-[#5ce088] transition-colors text-sm"
                             >
-                              Book with {practitioner.name.split(' ')[0]}
+                              Book with {practitioner.name}
                             </a>
                           </motion.div>
 
